@@ -28,7 +28,7 @@ class MainFragment : Fragment() {
         Log.e("AAA","MainFragment Created")
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
 
-        viewModel.resultLiveData.observe(requireActivity(), Observer {
+        viewModel.liveData.observe(requireActivity(), Observer {
             val result = binding.loadTextData
             result.text = it
         })
